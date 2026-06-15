@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Profesional -->
+  <title>Enciclopedia del Imperio Español - Crónicas, Atlas y Archivo Académico</title>
+  <meta name="description" content="La mayor enciclopedia digital e independiente sobre el Imperio Español. Explore monarcas, exploradores de ultramar, virreinatos americanos, batallas históricas, la organización de los Tercios y el comercio del Galeón de Manila. Basado estrictamente en hechos históricos.">
+  <meta name="keywords" content="Imperio Español, Historia de España, Reyes Católicos, Carlos V, Felipe II, Tercios, Galeón de Manila, Virreinatos, Descubrimiento de América, Batalla de Lepanto, Leyes de Indias">
+  <link rel="canonical" href="https://gcarrioon.github.io/imperio-espanol/index.html">
+  
+  <!-- Icono del Sitio Oficial -->
+  <link rel="icon" type="image/png" href="/img/cruz-borgona.png">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gcarrioon.github.io/imperio-espanol/index.html">
+  <meta property="og:title" content="Enciclopedia del Imperio Español - Crónicas y Archivo Académico">
+  <meta property="og:description" content="Explore la historia del Imperio Español con rigor académico: desde la unificación de los Reyes Católicos hasta el siglo XIX. Descubra los mapas de máxima expansión, las batallas épicas y biografías de monarcas y descubridores.">
+  <meta property="og:image" content="/img/cruz-borgona.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://gcarrioon.github.io/imperio-espanol/index.html">
+  <meta property="twitter:title" content="Enciclopedia del Imperio Español">
+  <meta property="twitter:description" content="Crónicas detalladas, mapas interactivos, biografías y archivos académicos del Imperio donde nunca se ponía el sol.">
+  <meta property="twitter:image" content="/img/cruz-borgona.png">
+
+  <!-- Schema.org JSON-LD para SEO académico -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Enciclopedia del Imperio Español",
+    "alternateName": "Archivo de la Monarquía Hispánica",
+    "url": "https://gcarrioon.github.io/imperio-espanol/",
+    "description": "Recurso de consulta histórico y académico sobre la evolución territorial, cultural y militar del Imperio Español."
+  }
+  </script>
+
+  <!-- Enlace a estilos compilados -->
+  <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-rose-800 selection:text-white">
+
+  <!-- CABECERA PRINCIPAL (MENU ACADÉMICO) -->
+  <header class="border-b border-dorado/20 bg-slate-900/90 backdrop-blur sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo con Cruz de Borgoña -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="/img/cruz-borgona.png" alt="Cruz de Borgoña" class="w-10 h-10 transform group-hover:rotate-12 transition-transform duration-500">
+          <div>
+            <span class="text-lg sm:text-xl font-cinzel font-bold tracking-widest text-white block group-hover:text-dorado transition-colors">IMPERIO ESPAÑOL</span>
+            <span class="text-[10px] font-mono tracking-widest text-dorado/80 uppercase block">Enciclopedia Digital</span>
+          </div>
+        </a>
+
+        <!-- Formulario de Búsqueda Rápida en Cabecera -->
+        <form id="header-search-form" class="hidden md:flex items-center relative max-w-xs w-full">
+          <input type="text" id="header-search-input" placeholder="Buscar en el archivo..." class="w-full bg-slate-950/60 border border-dorado/20 text-xs rounded-none px-4 py-2 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-dorado transition-all">
+          <button type="submit" class="absolute right-3 text-dorado/60 hover:text-dorado transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </button>
+        </form>
+
+        <!-- Botón de Menú Móvil -->
+        <div class="flex lg:hidden">
+          <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-dorado hover:text-white focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menú Desplegable Navegación Principal (Pantallas Grandes) -->
+    <nav class="hidden lg:flex border-t border-dorado/15 bg-slate-950/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="flex space-x-1 overflow-x-auto justify-between py-2 text-xs font-mono tracking-wider">
+          <a href="index.html" class="px-3 py-1.5 text-white border-b-2 border-rojo-imperial font-bold uppercase">Inicio</a>
+          <a href="monarcas.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Monarcas</a>
+          <a href="exploradores.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Exploradores</a>
+          <a href="virreinatos.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Virreinatos</a>
+          <a href="batallas.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Batallas</a>
+          <a href="tercios.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Tercios</a>
+          <a href="comercio.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Comercio</a>
+          <a href="cronologia.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Cronología</a>
+          <a href="mapas.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Mapas</a>
+          <a href="recursos.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Recursos</a>
+          <a href="buscador.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase text-dorado border border-dorado/30 px-2 rounded font-bold">🔍 Buscador</a>
+          <a href="contacto.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Contacto</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Menú Móvil -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-t border-dorado/20">
+      <div class="px-2 pt-2 pb-4 space-y-1">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-base font-cinzel text-white bg-slate-950 border-l-4 border-rojo-imperial">Inicio</a>
+        <a href="monarcas.html" class="block px-3 py-2 rounded-md text-base font-cinzel text-slate-300 hover:bg-slate-950 hover:text-dorado">Monarcas</a>
+        <a href="exploradores.html" class="block px-3 py-2 rounded-md text-base font-cinzel text-slate-300 hover:bg-slate-950 hover:text-dorado">Exploradores</a>
+        <a href="virreinatos.html" class="block px-3 py-2 rounded-md text-base font-cinzel text-slate-300 hover:bg-slate-950 hover:text-dorado">Virreinatos</a>
+        <a href="batallas.html" class="block px-3 py-2 rounded-md text-base font-cinzel text-slate-300 hover:bg-slate-950 hover:text-dorado">Batallas</a>
+        <a href="tercios.html" class="block px-3 py-2 rounded-md text-base font-cinzel text-slate-300 hover:bg-slate-950 hover:text-dorado">Tercios</a>
+        <a href="comercio.html" class="block px-3 py-2 rounded-md text-base font-cinzel text-slate-300 hover:bg-slate-950 hover:text-dorado">Comercio</a>
+        <a href="cronologia.html" class="block px-3 py-2 rounded-md text-base font-cinzel text-slate-300 hover:bg-slate-950 hover:text-dorado">Cronología</a>
+        <a href="mapas.html" class="block px-3 py-2 rounded-md text-base font-cinzel text-slate-300 hover:bg-slate-950 hover:text-dorado">Mapas</a>
+        <a href="recursos.html" class="block px-3 py-2 rounded-md text-base font-cinzel text-slate-300 hover:bg-slate-950 hover:text-dorado">Recursos</a>
+        <a href="buscador.html" class="block px-3 py-2 rounded-md text-base font-cinzel text-dorado bg-slate-950 hover:text-white font-bold">🔍 Buscador Global</a>
+        <a href="contacto.html" class="block px-3 py-2 rounded-md text-base font-cinzel text-slate-300 hover:bg-slate-950 hover:text-dorado">Contacto</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECCIÓN HERO DE BIENVENIDA -->
+  <section class="relative bg-gradient-to-b from-slate-900 to-slate-950 py-16 sm:py-24 border-b border-dorado/15 overflow-hidden">
+    <!-- Superposición clásica decorativa de la Cruz de Borgoña -->
+    <div class="absolute inset-0 opacity-5 pointer-events-none flex items-center justify-center">
+      <img src="/img/cruz-borgona.png" alt="" class="w-full max-w-4xl rotate-12 scale-125">
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 border border-dorado/30 rounded-full bg-slate-950/60 mb-6 text-xs font-mono tracking-widest text-dorado uppercase">
+        <span class="w-2 h-2 rounded-full bg-rojo-imperial animate-ping"></span>
+        Primer Imperio Global del Mundo Multicontinental
+      </div>
+      
+      <h1 class="text-4xl sm:text-5xl lg:text-7xl font-cinzel font-extrabold tracking-tight text-white mb-6 leading-tight">
+        Enciclopedia del <br class="hidden sm:block"> <span class="text-transparent bg-clip-text gradient-gold">Imperio Español</span>
+      </h1>
+      
+      <p class="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 font-serif leading-relaxed mb-10">
+        Inmersión profunda, documentada e independiente en la historia de la monarquía hispánica. Explore la soberanía territorial, la primera globalización comercial, las rutas interoceánicas y la amalgama de culturas en los virreinatos americanos desde el prisma analítico e imparcial de la historia científica.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="cronologia.html" class="w-full sm:w-auto px-8 py-3.5 bg-rojo-imperial hover:bg-rose-900 transition-all font-cinzel text-white text-sm font-bold tracking-wider uppercase border border-dorado/30 hover:border-dorado shadow-lg">
+          Línea del Tiempo Imperial
+        </a>
+        <a href="mapas.html" class="w-full sm:w-auto px-8 py-3.5 bg-slate-950 hover:bg-slate-900 transition-all text-dorado hover:text-white border border-dorado/40 font-mono text-xs tracking-wider uppercase">
+          Ver Mapas de Expansión
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSCADOR GLOBAL INTEGRADO (MUSEUM DESIGN) -->
+  <section class="py-8 bg-slate-900 relative z-20 -mt-8 border-y border-dorado/20 max-w-5xl mx-auto w-[90%] rounded-none shadow-2xl p-6 md:p-8">
+    <div class="text-center mb-4">
+      <h2 class="text-sm font-mono tracking-wider text-dorado uppercase">Consulta el Registro de Indias</h2>
+      <p class="text-xs text-slate-400 font-serif">Motor de búsqueda académico transversal de todo el portal histórico</p>
+    </div>
+    <form action="buscador.html" method="get" class="flex flex-col sm:flex-row gap-3">
+      <div class="relative flex-grow">
+        <input type="text" name="q" placeholder="Filtre registros: 'Lepanto', 'Carlos I', 'Potosí', 'Acapulco'..." class="w-full bg-slate-950 border border-dorado/25 text-sm rounded-none p-4 pl-12 text-white placeholder-slate-500 focus:outline-none focus:border-dorado transition-colors" required>
+        <span class="absolute left-4 top-1/2 -translate-y-1/2 text-dorado/50">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </span>
+      </div>
+      <button type="submit" class="bg-rojo-imperial hover:bg-rose-900 leading-none transition-colors border border-dorado px-8 py-4 font-cinzel text-xs font-bold text-white tracking-widest uppercase">
+        Acceder
+      </button>
+    </form>
+  </section>
+
+  <!-- MÉTRICAS Y ESTADÍSTICAS DEL IMPERIO -->
+  <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-cinzel text-white tracking-widest font-bold">Magnitud Histórica</h2>
+      <div class="h-1 w-20 bg-dorado mx-auto mt-3"></div>
+      <p class="text-xs font-mono text-slate-400 mt-2">DIFUSIÓN CIENTÍFICA EN CIFRAS VERIFICADAS</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+      <div class="bg-slate-900/40 p-6 border border-dorado/10 rounded">
+        <span class="block text-4xl font-cinzel text-dorado font-bold mb-2">4+</span>
+        <span class="block text-xs font-mono text-slate-400 uppercase tracking-wider">Siglos de Duración</span>
+        <span class="block text-[10px] text-slate-500 font-serif mt-1">1492 - 1898</span>
+      </div>
+
+      <div class="bg-slate-900/40 p-6 border border-dorado/10 rounded">
+        <span class="block text-4xl font-cinzel text-dorado font-bold mb-2">5</span>
+        <span class="block text-xs font-mono text-slate-400 uppercase tracking-wider">Continentes</span>
+        <span class="block text-[10px] text-slate-500 font-serif mt-1">Europa, América, Asia, África y Oceanía</span>
+      </div>
+
+      <div class="bg-slate-900/40 p-6 border border-dorado/10 rounded">
+        <span class="block text-4xl font-cinzel text-dorado font-bold mb-2">4</span>
+        <span class="block text-xs font-mono text-slate-400 uppercase tracking-wider">Virreinatos</span>
+        <span class="block text-[10px] text-slate-500 font-serif mt-1">Soberanía de Indias</span>
+      </div>
+
+      <div class="bg-slate-900/40 p-6 border border-dorado/10 rounded">
+        <span class="block text-4xl font-cinzel text-dorado font-bold mb-2">100+</span>
+        <span class="block text-xs font-mono text-slate-400 uppercase tracking-wider">Hazañas Marinas</span>
+        <span class="block text-[10px] text-slate-500 font-serif mt-1">Exploraciones atlánticas y pacíficas</span>
+      </div>
+
+      <div class="bg-slate-900/40 col-span-2 md:col-span-1 p-6 border border-dorado/10 rounded">
+        <span class="block text-2xl font-cinzel text-dorado font-bold mb-2">20M Km²</span>
+        <span class="block text-xs font-mono text-slate-400 uppercase tracking-wider">Máxima Extensión</span>
+        <span class="block text-[10px] text-slate-500 font-serif mt-1">Bajo el reinado de Carlos III</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÓDULOS O ARTÍCULOS DESTACADOS (BENTO-STYLE GRID) -->
+  <section class="py-16 bg-slate-900/40 border-y border-dorado/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
+        <div>
+          <h2 class="text-3xl font-cinzel text-white tracking-widest font-bold">Núcleo Teórico de Indias</h2>
+          <p class="text-sm font-serif text-slate-400 mt-2">Documentos maestros clasificados por áreas de estudio</p>
+        </div>
+        <a href="recursos.html" class="text-xs uppercase font-mono tracking-widest text-dorado hover:text-white transition-colors flex items-center gap-2">
+          Ver recursos de estudio
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Tarjeta 1: Monarcas -->
+        <div class="card-museum group rounded-none border border-dorado/15 overflow-hidden flex flex-col justify-between p-6 bg-slate-900/80">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-8 h-8 rounded-full bg-amber-950 flex items-center justify-center text-amber-400 border border-amber-500/30">👑</span>
+              <span class="text-xs font-mono tracking-widest text-slate-400 uppercase">Dinastías Reunidas</span>
+            </div>
+            <h3 class="text-xl font-cinzel font-bold text-white mb-3 group-hover:text-dorado transition-colors">La Corona y la Ley</h3>
+            <p class="text-xs text-slate-400 font-serif leading-relaxed mb-4">
+              Profundice en biografías completas y decretos reales. Desde los Reyes Católicos sentando las bases dinásticas de Castilla y Aragón, pasando por el cénit territorial de los Habsburgo y las reformas borbónicas modernizadoras.
+            </p>
+          </div>
+          <a href="monarcas.html" class="text-xs text-dorado group-hover:text-white uppercase font-mono tracking-widest flex items-center gap-2 mt-4">
+            Explorar Monarcas
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Tarjeta 2: Exploradores -->
+        <div class="card-museum group rounded-none border border-dorado/15 overflow-hidden flex flex-col justify-between p-6 bg-slate-900/80">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-8 h-8 rounded-full bg-emerald-950 flex items-center justify-center text-emerald-400 border border-emerald-500/30">🧭</span>
+              <span class="text-xs font-mono tracking-widest text-slate-400 uppercase">La Primera Globalización</span>
+            </div>
+            <h3 class="text-xl font-cinzel font-bold text-white mb-3 group-hover:text-dorado transition-colors">Exploraciones de Ultramar</h3>
+            <p class="text-xs text-slate-400 font-serif leading-relaxed mb-4">
+              Trazado exacto de las gestas cartográficas de Colón, Núñez de Balboa, Magallanes y Elcano. La audacia de la navegación sin mapas fiables y el descubrimiento de nuevas rutas comerciales intercontinentales del Atlántico y Pacífico.
+            </p>
+          </div>
+          <a href="exploradores.html" class="text-xs text-dorado group-hover:text-white uppercase font-mono tracking-widest flex items-center gap-2 mt-4">
+            Explorar Expediciones
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Tarjeta 3: Virreinatos -->
+        <div class="card-museum group rounded-none border border-dorado/15 overflow-hidden flex flex-col justify-between p-6 bg-slate-900/80">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-8 h-8 rounded-full bg-cyan-950 flex items-center justify-center text-cyan-400 border border-cyan-500/30">🏛️</span>
+              <span class="text-xs font-mono tracking-widest text-slate-400 uppercase">Administración y Sociedad</span>
+            </div>
+            <h3 class="text-xl font-cinzel font-bold text-white mb-3 group-hover:text-dorado transition-colors">Los Virreinatos de Indias</h3>
+            <p class="text-xs text-slate-400 font-serif leading-relaxed mb-4">
+              Descubra la estructura de la Nueva España, el Perú, la Nueva Granada y el Río de la Plata. La creación de reales audiencias, universidades coloniales, rutas de comercio regional y el surgimiento del barroco americano mestizo.
+            </p>
+          </div>
+          <a href="virreinatos.html" class="text-xs text-dorado group-hover:text-white uppercase font-mono tracking-widest flex items-center gap-2 mt-4">
+            Explorar Virreinatos
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Tarjeta 4: Batallas -->
+        <div class="card-museum group rounded-none border border-dorado/15 overflow-hidden flex flex-col justify-between p-6 bg-slate-900/80">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-8 h-8 rounded-full bg-rose-950 flex items-center justify-center text-rose-400 border border-rose-500/30">⚔️</span>
+              <span class="text-xs font-mono tracking-widest text-slate-400 uppercase">Conflictos de Soberanía</span>
+            </div>
+            <h3 class="text-xl font-cinzel font-bold text-white mb-3 group-hover:text-dorado transition-colors">Grandes Batallas</h3>
+            <p class="text-xs text-slate-400 font-serif leading-relaxed mb-4">
+              Análisis militar pormenorizado del Sitio de Granada (1492), la decisiva batalla galera de Lepanto (1571), el despliegues tácticos de San Quintín (1557) y los asedios barrocos de Breda en Flandes (1625).
+            </p>
+          </div>
+          <a href="batallas.html" class="text-xs text-dorado group-hover:text-white uppercase font-mono tracking-widest flex items-center gap-2 mt-4">
+            Estudiar Batallas
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Tarjeta 5: Los Tercios -->
+        <div class="card-museum group rounded-none border border-dorado/15 overflow-hidden flex flex-col justify-between p-6 bg-slate-900/80">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-8 h-8 rounded-full bg-blue-950 flex items-center justify-center text-blue-400 border border-blue-500/30">🛡️</span>
+              <span class="text-xs font-mono tracking-widest text-slate-400 uppercase">Infantería de Élite</span>
+            </div>
+            <h3 class="text-xl font-cinzel font-bold text-white mb-3 group-hover:text-dorado transition-colors">Los Tercios Legendarios</h3>
+            <p class="text-xs text-slate-400 font-serif leading-relaxed mb-4">
+              Conozca a fondo el armamento, las formaciones de combate, las ordenanzas reales y las famosas tácticas basadas en la pica y el arcabuz que convirtieron a las tropas españolas en imbatibles por 150 años.
+            </p>
+          </div>
+          <a href="tercios.html" class="text-xs text-dorado group-hover:text-white uppercase font-mono tracking-widest flex items-center gap-2 mt-4">
+            Descubrir los Tercios
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Tarjeta 6: Galeón y Comercio -->
+        <div class="card-museum group rounded-none border border-dorado/15 overflow-hidden flex flex-col justify-between p-6 bg-slate-900/80">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-8 h-8 rounded-full bg-indigo-950 flex items-center justify-center text-indigo-400 border border-indigo-500/30">🚢</span>
+              <span class="text-xs font-mono tracking-widest text-slate-400 uppercase">Rutas Mercantiles globales</span>
+            </div>
+            <h3 class="text-xl font-cinzel font-bold text-white mb-3 group-hover:text-dorado transition-colors">Las Flotas de Indias</h3>
+            <p class="text-xs text-slate-400 font-serif leading-relaxed mb-4">
+              La colosal red mercantil: el Galeón de Manila, la Casa de la Contratación y la Flota de Indias Atlántica. Flujos comerciales de plata americana intercambiados por sedas, especias y porcelanas chinas orientales.
+            </p>
+          </div>
+          <a href="comercio.html" class="text-xs text-dorado group-hover:text-white uppercase font-mono tracking-widest flex items-center gap-2 mt-4">
+            Estudiar Comercio
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LÍNEA TEMPORAL SUTÍL INTERACTIVA (PREVIEW DE LA COMPLETA) -->
+  <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-gradient-to-r from-slate-900 to-slate-950 border border-dorado/15 p-8 rounded-none relative overflow-hidden">
+      
+      <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="max-w-2xl text-center md:text-left">
+          <h2 class="text-2xl font-cinzel text-white tracking-widest font-bold">Un Recorrido por Cuatro Siglos de Gloria y Ocaso</h2>
+          <p class="text-sm text-slate-400 font-serif mt-2">
+            De la boda de Isabel I de Castilla y Fernando II de Aragón en 1469 hasta la forzosa retirada transoceánica del desastre nacional de 1898 en Cuba y Filipinas. Acceda al eje cronológico detallado de la Monarquía Hispánica.
+          </p>
+          
+          <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+            <span class="text-xs font-mono bg-rojo-imperial/30 border border-rojo-imperial/40 text-dorado px-2.5 py-1 rounded">1469 - Origen</span>
+            <span class="text-xs font-mono bg-slate-900 border border-dorado/20 text-slate-300 px-2.5 py-1 rounded">1519 - Apogeo</span>
+            <span class="text-xs font-mono bg-slate-900 border border-dorado/20 text-slate-300 px-2.5 py-1 rounded">1713 - Reformas</span>
+            <span class="text-xs font-mono bg-slate-950 border border-rojo-imperial/20 text-slate-400 px-2.5 py-1 rounded">1898 - Retirada</span>
+          </div>
+        </div>
+
+        <div class="w-full md:w-auto shrink-0">
+          <a href="cronologia.html" class="block w-full text-center px-8 py-4 bg-rojo-imperial text-white font-cinzel font-bold text-xs tracking-widest uppercase border border-dorado hover:bg-rose-900 transition-all shadow-xl">
+            Línea de Tiempo Completa
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPA DE MÁXIMA EXPANSION EN VECTORES SVG -->
+  <section class="py-16 bg-slate-900/60 border-t border-dorado/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-cinzel text-white tracking-widest font-semibold flex items-center justify-center gap-3">
+          <svg class="h-8 w-8 text-dorado" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h2m4-1c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+          </svg>
+          Atlas Geográfico e Histórico de las Indias
+        </h2>
+        <div class="h-1 w-20 bg-dorado mx-auto mt-2"></div>
+        <p class="text-xs font-mono text-slate-450 mt-2">VISUALIZACIÓN MULTICONTINENTAL DE LOS VIRREINATOS Y RUTAS</p>
+      </div>
+
+      <div class="bg-slate-950 border border-dorado/20 rounded-none p-4 md:p-8 relative flex items-center justify-center">
+        <!-- SVG Map Representation simplified but elegant of Spanish territories globally -->
+        <svg viewBox="0 0 1000 450" class="w-full max-w-5xl h-auto" style="filter: drop-shadow(0px 8px 24px rgba(0,0,0,0.5));">
+          <!-- Océano de fondo suave -->
+          <rect width="1000" height="450" fill="#0b1724" rx="2" />
+          <path d="M 0,0 L 1000,0 L 1000,450 L 0,450 Z" fill="none" stroke="#c9a227" stroke-width="1" opacity="0.1" />
+          <!-- Rejilla náutica de rosas de viento sutiles -->
+          <circle cx="250" cy="225" r="80" fill="none" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="4 6" opacity="0.15" />
+          <circle cx="750" cy="225" r="80" fill="none" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="4 6" opacity="0.15" />
+          <line x1="250" y1="100" x2="250" y2="350" stroke="#c9a227" stroke-width="0.5" opacity="0.1" />
+          <line x1="100" y1="225" x2="400" y2="225" stroke="#c9a227" stroke-width="0.5" opacity="0.1" />
+          
+          <!-- Dibujo Continental Simplificado (Siluetas sutiles) -->
+          <!-- América del Norte y del Sur (Izquierda) -->
+          <path d="M 70 30 Q 150 40 200 90 T 260 150 T 210 240 T 170 310 T 220 420 Q 180 430 140 370 T 80 280 T 60 180 Z" fill="#152b44" stroke="#c9a227" stroke-width="1" opacity="0.25" />
+          <!-- Europa y África (Centro) -->
+          <path d="M 460 20 Q 520 20 620 40 T 680 120 T 590 230 T 610 350 T 560 410 Q 480 390 440 300 T 420 180 T 450 60 Z" fill="#152b44" stroke="#c9a227" stroke-width="1" opacity="0.25" />
+          <!-- Asia / Oceanía (Derecha-Filipinas) -->
+          <path d="M 750 40 Q 850 40 920 90 T 950 200 T 890 320 T 780 420 Q 720 380 750 300 Q 710 240 760 120 Z" fill="#152b44" stroke="#c9a227" stroke-width="1" opacity="0.25" />
+
+          <!-- Marcas históricas en color rojo imperial del Imperio Español -->
+          <!-- Imperio Americano (Genuino control territorial, virreinatos) -->
+          <path d="M 100 50 Q 120 70 140 100 T 180 160 T 160 230 T 140 300 T 110 330 T 150 380 T 180 390 Q 130 400 110 350 T 90 270 T 70 180 T 80 80 Z" fill="#8b1e2d" opacity="0.75" stroke="#c9a227" stroke-width="0.5" />
+          
+          <!-- Metrópoli (España) -->
+          <circle cx="470" cy="115" r="10" fill="#8b1e2d" opacity="0.9" stroke="#ffffff" stroke-width="1"/>
+          <text x="490" y="112" fill="#ffffff" font-family="Cinzel" font-size="12" font-weight="bold">España (Metrópoli)</text>
+
+          <!-- Virreinato Nueva España -->
+          <circle cx="125" cy="130" r="8" fill="#8b1e2d" opacity="0.9" />
+          <text x="140" y="134" fill="#c9a227" font-family="Cinzel" font-size="10">V. Nueva España</text>
+
+          <!-- Virreinato del Perú -->
+          <circle cx="140" cy="240" r="8" fill="#8b1e2d" opacity="0.9" />
+          <text x="155" y="244" fill="#c9a227" font-family="Cinzel" font-size="10">V. del Perú</text>
+
+          <!-- Virreinato Nueva Granada -->
+          <circle cx="150" cy="190" r="6" fill="#8b1e2d" opacity="0.9" />
+          <text x="162" y="194" fill="#c9a227" font-family="Cinzel" font-size="10">V. Nueva Granada</text>
+
+          <!-- Virreinato Río de la Plata -->
+          <circle cx="170" cy="335" r="7" fill="#8b1e2d" opacity="0.9" />
+          <text x="185" y="339" fill="#c9a227" font-family="Cinzel" font-size="10">V. Río de la Plata</text>
+
+          <!-- Filipinas -->
+          <circle cx="820" cy="180" r="5" fill="#8b1e2d" opacity="0.9" />
+          <text x="830" y="184" fill="#c9a227" font-family="Cinzel" font-size="10">Filipinas</text>
+
+          <!-- Rutas Navales de la primera Globalización (Trazo discontinuo elegante) -->
+          <!-- Ruta Atlántica (Cádiz - Caribe) -->
+          <path d="M 470 125 Q 310 180 180 180" fill="none" stroke="#c9a227" stroke-width="1.5" stroke-dasharray="8 5" opacity="0.8" />
+          <text x="310" y="165" fill="#c9a227" font-family="monospace" font-size="8" letter-spacing="1">Flota de Indias</text>
+
+          <!-- Tornaviaje de Urdaneta (Manila - Acapulco) -->
+          <path d="M 820 175 Q 980 100 1000 100 M 0 100 Q 60 105 115 125" fill="none" stroke="#c9a227" stroke-width="1.5" stroke-dasharray="8 5" opacity="0.8" />
+          <text x="25" y="92" fill="#c9a227" font-family="monospace" font-size="8" letter-spacing="1">Galeón de Manila</text>
+        </svg>
+
+        <!-- Leyenda -->
+        <div class="absolute bottom-4 left-4 bg-slate-900/90 border border-dorado/30 p-3 text-[10px] font-mono text-slate-300">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="inline-block w-3 h-3 bg-rojo-imperial border border-dorado/30"></span>
+            Territorios de la Monarquía Hispánica
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="inline-block w-4 h-0 border-t-2 border-dashed border-dorado"></span>
+            Líneas de la primera globalización comercial
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-6">
+        <a href="mapas.html" class="inline-flex items-center gap-2 text-xs uppercase font-mono tracking-widest text-dorado hover:text-white transition-opacity">
+          Acceder al visor completo de cartografía digital histórica
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA ACADÉMICO -->
+  <footer class="border-t border-dorado/30 bg-slate-950 pt-16 pb-8 text-xs text-slate-400 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <!-- Escudo sutil / Cruz de Borgoña -->
+          <div class="flex items-center gap-3 mb-4">
+            <img src="/img/cruz-borgona.png" alt="Cruz de Borgoña" class="w-8 h-8">
+            <span class="font-cinzel text-md font-bold tracking-wider text-white">ENCICLOPEDIA DIGITAL</span>
+          </div>
+          <p class="font-serif leading-relaxed text-slate-450 text-justify">
+            La Enciclopedia del Imperio Español es una iniciativa independiente para documentar con máximo rigor científico y rigor intelectual el legado de los cuatro siglos del imperio global hispano. Todos nuestros contenidos se fundamentan en fuentes primarias, crónicas verificadas y monografías académicas modernas.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-cinzel text-white uppercase tracking-wider mb-4 border-b border-dorado/10 pb-2">Archivo General</h4>
+          <ul class="space-y-2.5 font-mono text-slate-350">
+            <li><a href="monarcas.html" class="hover:text-dorado transition-colors">👑 Catálogo de Monarcas</a></li>
+            <li><a href="exploradores.html" class="hover:text-dorado transition-colors">🧭 Héroes del Mar Océano</a></li>
+            <li><a href="virreinatos.html" class="hover:text-dorado transition-colors">🏛️ Gobernanza y Ley común</a></li>
+            <li><a href="batallas.html" class="hover:text-dorado transition-colors">⚔️ Conflictos Bélicos</a></li>
+            <li><a href="tercios.html" class="hover:text-dorado transition-colors">🛡️ Ordenanza de los Tercios</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-cinzel text-white uppercase tracking-wider mb-4 border-b border-dorado/10 pb-2">Comercio y Ciencia</h4>
+          <ul class="space-y-2.5 font-mono text-slate-350">
+            <li><a href="comercio.html" class="hover:text-dorado transition-colors">🚢 Rutas Navales Interoceánicas</a></li>
+            <li><a href="cronologia.html" class="hover:text-dorado transition-colors">📅 Cronología Histórica</a></li>
+            <li><a href="mapas.html" class="hover:text-dorado transition-colors">🗺️ Atlas Cartográfico</a></li>
+            <li><a href="recursos.html" class="hover:text-dorado transition-colors">📚 Fichas y Recursos de Estudio</a></li>
+            <li><a href="buscador.html" class="hover:text-dorado transition-colors">🔍 Terminal del Buscador</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-cinzel text-white uppercase tracking-wider mb-4 border-b border-dorado/10 pb-2">Cita del Portal</h4>
+          <div class="bg-slate-900 border border-dorado/20 p-4 font-mono leading-relaxed text-slate-400">
+            <span class="block text-[8px] text-dorado uppercase mb-2">Formato de cita académica (Chicago/ISO):</span>
+            "Enciclopedia del Imperio Español". Madrid: Archivo Digital de la Monarquía Hispánica, 2026. Disponible en https://gcarrioon.github.io/imperio-espanol.
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-900 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500 font-mono text-[10px]">
+        <div>
+          &copy; 2026 Enciclopedia del Imperio Español. Publicado bajo Licencia Académica Abierta de Investigación.
+        </div>
+        <div class="flex gap-6">
+          <a href="contacto.html" class="hover:text-dorado transition-colors">Sugerencias Académicas</a>
+          <a href="recursos.html" class="hover:text-dorado transition-colors">Directrices De Uso No Comercial</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Script del buscador transversal -->
+  <script src="/js/buscador.js" defer></script>
+</body>
+</html>

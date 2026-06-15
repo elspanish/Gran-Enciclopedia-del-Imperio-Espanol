@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Profesional -->
+  <title>Atlas Cartográfico del Imperio Español - Mapas Históricos y Rutas</title>
+  <meta name="description" content="Explore el atlas cartográfico del Imperio Español en su máxima expansión terráquea. Mapas interactivos vectoriales, rutas interoceánicas y delimitación geográfica de los virreinatos.">
+  <link rel="canonical" href="https://gcarrioon.github.io/imperio-espanol/mapas.html">
+  
+  <link rel="stylesheet" href="/css/estilo.css">
+  <style>
+    /* Estilos interactivos sencillos para alternar las descripciones cartográficas */
+    .map-tab-content { display: none; }
+    .map-tab-content.active { display: block; }
+    .map-tab-button.active {
+      border-color: #c9a227;
+      color: #ffffff;
+      background-color: rgba(139, 30, 45, 0.4);
+    }
+  </style>
+
+  <!-- Icono del Sitio Oficial -->
+  <link rel="icon" type="image/png" href="/img/cruz-borgona.png">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-rose-800 selection:text-white">
+
+  <!-- CABECERA PRINCIPAL -->
+  <header class="border-b border-dorado/20 bg-slate-900/90 backdrop-blur sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="/img/cruz-borgona.png" alt="Cruz de Borgoña" class="w-10 h-10 transform group-hover:rotate-12 transition-transform duration-500">
+          <div>
+            <span class="text-lg sm:text-xl font-cinzel font-bold tracking-widest text-white block group-hover:text-dorado transition-colors">IMPERIO ESPAÑOL</span>
+            <span class="text-[10px] font-mono tracking-widest text-dorado/80 uppercase block">Enciclopedia Digital</span>
+          </div>
+        </a>
+
+        <!-- Buscador Cabecera -->
+        <form id="header-search-form" class="hidden md:flex items-center relative max-w-xs w-full">
+          <input type="text" id="header-search-input" placeholder="Buscar en el archivo..." class="w-full bg-slate-950/60 border border-dorado/20 text-xs rounded-none px-4 py-2 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-dorado transition-all">
+          <button type="submit" class="absolute right-3 text-dorado/60 hover:text-dorado transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </button>
+        </form>
+
+        <div class="flex lg:hidden">
+          <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-dorado hover:text-white focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="hidden lg:flex border-t border-dorado/15 bg-slate-950/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="flex space-x-1 overflow-x-auto justify-between py-2 text-xs font-mono tracking-wider">
+          <a href="index.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Inicio</a>
+          <a href="monarcas.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Monarcas</a>
+          <a href="exploradores.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Exploradores</a>
+          <a href="virreinatos.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Virreinatos</a>
+          <a href="batallas.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Batallas</a>
+          <a href="tercios.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Tercios</a>
+          <a href="comercio.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Comercio</a>
+          <a href="cronologia.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Cronología</a>
+          <a href="mapas.html" class="px-3 py-1.5 text-white border-b-2 border-rojo-imperial font-bold uppercase font-bold">Mapas</a>
+          <a href="recursos.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Recursos</a>
+          <a href="buscador.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase text-dorado border border-dorado/30 px-2 rounded font-bold">🔍 Buscador</a>
+          <a href="contacto.html" class="px-3 py-1.5 text-slate-300 hover:text-dorado hover:border-b-2 hover:border-dorado transition-all uppercase">Contacto</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SECCIÓN HERO -->
+  <section class="relative bg-gradient-to-b from-slate-900 to-slate-950 py-12 border-b border-dorado/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h1 class="text-3xl sm:text-5xl font-cinzel font-bold text-white tracking-widest">Galeones y Fronteras del Orbe</h1>
+      <p class="mt-3 text-slate-400 font-serif max-w-3xl mx-auto text-sm leading-relaxed">
+        El trazado cartográfico militar de las Indias de Poniente, el mar del Sur, Nápoles, Flandes y el archipiélago de Filipinas. Explore de modo interactivo la delimitación soberana de la primera globalización universal.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CARTOGRÁFICA INTERACTIVA -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-grow grid grid-cols-1 lg:grid-cols-12 gap-12">
+    
+    <!-- CONTROLES E INTERACCIÓN TABS (4 cols en lg) -->
+    <div class="lg:col-span-4 space-y-6 flex flex-col justify-start">
+      <div class="bg-slate-900/60 p-6 border border-dorado/15 rounded">
+        <h3 class="text-sm font-mono text-dorado uppercase tracking-widest mb-3 border-b border-dorado/10 pb-2">Hojas de Inspección</h3>
+        <p class="text-[11px] text-slate-400 font-serif leading-relaxed mb-4">
+          Seleccione una de las siguientes regiones geográficas cardinales para cargar al instante su correspondiente carta cartográfica descriptiva e informes geoeconómicos oficiales:
+        </p>
+
+        <div class="flex flex-col gap-2 font-mono text-xs text-left">
+          <button onclick="switchTab('tab-nueva-espana')" id="btn-tab-nueva-espana" class="map-tab-button text-left w-full px-4 py-3 border border-slate-800 hover:border-dorado/50 hover:bg-slate-950 transition-all text-slate-300 rounded font-bold uppercase active">
+            🌎 Nueva España y Norteamérica
+          </button>
+          <button onclick="switchTab('tab-virreinato-peru')" id="btn-tab-virreinato-peru" class="map-tab-button text-left w-full px-4 py-3 border border-slate-800 hover:border-dorado/50 hover:bg-slate-950 transition-all text-slate-300 rounded font-bold uppercase">
+            ⛰️ Virreinato del Perú andino
+          </button>
+          <button onclick="switchTab('tab-europa-espa')" id="btn-tab-europa-espa" class="map-tab-button text-left w-full px-4 py-3 border border-slate-800 hover:border-dorado/50 hover:bg-slate-950 transition-all text-slate-300 rounded font-bold uppercase">
+            🛡️ Flandes, Milan y Nápoles
+          </button>
+          <button onclick="switchTab('tab-filipinas-asia')" id="btn-tab-filipinas-asia" class="map-tab-button text-left w-full px-4 py-3 border border-slate-800 hover:border-dorado/50 hover:bg-slate-950 transition-all text-slate-300 rounded font-bold uppercase">
+            ⚓ Filipinas e Islas del Poniente
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 p-6 border border-slate-850 text-xs font-mono text-slate-500 rounded leading-relaxed">
+        <strong>Referencia del Archivo:</strong> Las cartas de navegación marítimas representadas se fundamentan en las descripciones náuticas custodiadas celosamente por los Pilotos Mayores de la Casa de la Contratación.
+      </div>
+    </div>
+
+    <!-- MAP ILLUSTRATIVE SVG DISPLAY & DETAILED DESCRIPTION (8 cols en lg) -->
+    <div class="lg:col-span-8 space-y-6">
+      
+      <!-- Visualización Principal de Mapa SVG Artístico Cartográfico -->
+      <div class="bg-slate-900/40 p-6 rounded border border-dorado/15 relative overflow-hidden flex flex-col items-center">
+        <!-- Rosa de los vientos estilizada de fondo o decoración -->
+        <div class="absolute right-4 bottom-4 opacity-15 pointer-events-none w-36 h-36">
+          <img src="/img/cruz-borgona.png" alt="" class="w-full h-full rotate-45">
+        </div>
+
+        <h3 class="text-xs font-mono text-dorado uppercase tracking-widest mb-4">Esquema Cartográfico del Imperio</h3>
+        
+        <!-- SVG Cartografía Elegante con coordenadas y rosas de los vientos -->
+        <svg class="w-full max-w-lg h-72 border border-slate-800 bg-slate-950/65 rounded" viewBox="0 0 800 400">
+          <!-- Cuadrícula de coordenadas marinas -->
+          <g stroke="#c9a227" stroke-width="0.3" stroke-dasharray="2,5" opacity="0.4">
+            <line x1="100" y1="0" x2="100" y2="400" />
+            <line x1="200" y1="0" x2="200" y2="400" />
+            <line x1="300" y1="0" x2="300" y2="400" />
+            <line x1="400" y1="0" x2="400" y2="400" />
+            <line x1="500" y1="0" x2="500" y2="400" />
+            <line x1="600" y1="0" x2="600" y2="400" />
+            <line x1="700" y1="0" x2="700" y2="400" />
+            
+            <line x1="0" y1="100" x2="800" y2="100" />
+            <line x1="0" y1="200" x2="800" y2="200" />
+            <line x1="0" y1="300" x2="800" y2="300" />
+          </g>
+
+          <!-- Marcaciones geográficas representativas en el fondo -->
+          <text x="350" y="30" fill="#c9a227" font-family="Cinzel" font-size="12" opacity="0.5" letter-spacing="4">OCEANVS ATLANTICVS</text>
+          <text x="50" y="360" fill="#c9a227" font-family="Cinzel" font-size="12" opacity="0.4" letter-spacing="4">MAR DEL SVR (PACIFICVS)</text>
+
+          <!-- Rosa de los Vientos SVG en la esquina -->
+          <g transform="translate(710,90)" stroke="#c9a227" stroke-width="1" fill="none" opacity="0.7">
+            <circle cx="0" cy="0" r="40" stroke-dasharray="2,3" />
+            <path d="M0,-50 L0,50 M-50,0 L50,0 M-35,-35 L35,35 M-35,35 L35,-35" />
+            <polygon points="0,-55 5,-10 0,0" fill="#8b1e2d" stroke="none" />
+            <polygon points="0,-55 -5,-10 0,0" fill="#c9a227" stroke="none" />
+            <text x="-5" y="-62" fill="#c9a227" font-family="sans-serif" font-size="11" font-weight="bold">N</text>
+          </g>
+
+          <!-- Continente de América Representado de forma abstracta de un mapa antiguo -->
+          <!-- Norteamérica izquierda superior -->
+          <path d="M 20 50 Q 80 40 180 70 T 300 120 T 320 180 T 250 200" fill="none" stroke="#c9a227" stroke-width="1.5" stroke-dasharray="3,1" opacity="0.6"/>
+          <!-- Centroamérica -->
+          <path d="M 250 200 Q 230 220 220 240 T 260 260" fill="none" stroke="#c9a227" stroke-width="1.5" stroke-dasharray="3,1" opacity="0.6"/>
+          <!-- Sudamérica -->
+          <path d="M 260 260 Q 320 280 340 310 T 300 370 T 240 390 Q 200 350 210 290 Z" fill="#8b1e2d" fill-opacity="0.15" stroke="#c9a227" stroke-width="1.5" />
+
+          <!-- España península extrema derecha superior -->
+          <path d="M 580 80 Q 610 60 640 90 T 660 140" fill="none" stroke="#c9a227" stroke-width="1.5" stroke-dasharray="3,1" opacity="0.6"/>
+          <circle cx="590" cy="95" r="5" fill="#8b1e2d" />
+          <text x="560" y="112" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="bold">Sevilla</text>
+
+          <!-- Manila extrema izquierda superior -->
+          <circle cx="50" cy="120" r="5" fill="#8b1e2d" />
+          <text x="45" y="137" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="bold">Manila</text>
+
+          <!-- Trazado de ruta Galeón y Flota (Flechas marinas) -->
+          <!-- Ruta Colombina/Flotas -->
+          <path d="M 585 95 C 480 110, 360 140, 260 195" fill="none" stroke="#8b1e2d" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+          <text x="420" y="125" fill="#8b1e2d" font-family="sans-serif" font-size="8" font-weight="bold">Flota de Indias</text>
+
+          <!-- Ruta Galeón de Manila -->
+          <path d="M 50 120 C 100 150, 180 170, 248 198" fill="none" stroke="#c9a227" stroke-width="2" stroke-dasharray="5,3" />
+          <text x="110" y="195" fill="#c9a227" font-family="sans-serif" font-size="8" font-weight="bold">Galeón de Manila</text>
+
+          <!-- Nombres de áreas costeras marcadas -->
+          <text x="210" y="160" fill="#ffffff" font-family="Cinzel" font-size="10" font-weight="bold">NUEVA ESPAÑA</text>
+          <text x="260" y="320" fill="#ffffff" font-family="Cinzel" font-size="10" font-weight="bold">PERV</text>
+
+        </svg>
+      </div>
+
+      <!-- TEXTOS INFORMATIVOS TABS -->
+      
+      <!-- TAB_1: NUEVA ESPAÑA -->
+      <article id="tab-nueva-espana" class="map-tab-content bg-slate-900/40 p-6 rounded border border-slate-800 active leading-relaxed space-y-4">
+        <h3 class="text-xl font-cinzel text-white font-bold border-b border-dorado/10 pb-2">🌎 Territorios de la Nueva España y Norteamérica</h3>
+        <p class="text-sm text-slate-350 font-serif text-justify">
+          El Virreinato de la Nueva España constituía un mosaico geográfico colosal y asombroso. Por el norte, sus fronteras se expandieron progresivamente mediante misiones espirituales Franciscanas y presidios fortificados de defensa militar hasta las actuales California, Texas, Colorado, Arizona y Nuevo México. Por el este, la soberanía nominal integraba plenos derechos sobre los exuberantes litorales de Florida, Luisiana militar, las Antillas Mayores y costeras de Yucatán.
+        </p>
+        <p class="text-sm text-slate-350 font-serif text-justify">
+          El cerebro administrativo radicaba sólidamente en la Real Audiencia de México, resguardando el Camino Real de Tierra Adentro. Esta red conectaba de forma ágil puertos plateros septentrionales críticos (Zacatecas, Guanajuato) con los dinámicos puertos aduaneros imperiales atlánticos de Veracruz y pacíficos de Acapulco.
+        </p>
+      </article>
+
+      <!-- TAB_2: VIRREINATO DE PERU -->
+      <article id="tab-virreinato-peru" class="map-tab-content bg-slate-900/40 p-6 rounded border border-slate-800 leading-relaxed space-y-4">
+        <h3 class="text-xl font-cinzel text-white font-bold border-b border-dorado/10 pb-2">⛰️ El Dominio Andino y Sudamericano del Perú</h3>
+        <p class="text-sm text-slate-350 font-serif text-justify">
+          Durante los siglos XVI y XVII, el Virreinato del Perú abarcaba de modo continuo casi la enteridad geográfica de Sudamérica, exceptuando la costa este carioca reclamada y delimitada legalmente por Portugal. El eje geopolítico andino se extendía desde los densos bosques de Quito, cruzando las escarpadas cordilleras de Potosí, el valle fértil central de Chile, hasta el imponente e indómito Estrecho de Magallanes en el sur patagónico salvaje.
+        </p>
+        <p class="text-sm text-slate-350 font-serif text-justify">
+          Su capital de costa y puerto protegido militar del Callao centralizaba la recolección de las inmensas barras de plata procedentes de Charcas, organizando de manera anual escoltas navales marinas de protección con el objetivo estratégico de transferir la riqueza fiscal hasta el Istmo de Panamá para su traslado a la flota atlántica de retorno.
+        </p>
+      </article>
+
+      <!-- TAB_3: EUROPA ESPAÑOLA -->
+      <article id="tab-europa-espa" class="map-tab-content bg-slate-900/40 p-6 rounded border border-slate-800 leading-relaxed space-y-4">
+        <h3 class="text-xl font-cinzel text-white font-bold border-b border-dorado/10 pb-2">🛡️ Los Estados e Influencia en la Europa de los Hagsburgo</h3>
+        <p class="text-sm text-slate-350 font-serif text-justify">
+          La soberanía geopolítica militar hispánica en territorio del Viejo Continente abarcaba mucho más que la propia Península Ibérica. Bajo las coronas sucesivas de Carlos I y Felipe II, se articularon de forma estable e independiente los dominios militares gobernados de forma directa de los Países Bajos Españoles (Flandes), el próspero e influyente Franco Condado alpino, el estratégico Ducado de Milán en Italia de Norte y los ricos Reinos de Nápoles, Sicilia y Cerdeña en el Mediterráneo meridional.
+        </p>
+        <p class="text-sm text-slate-350 font-serif text-justify">
+          Para interconectar y movilizar de modo seguro ejércitos, suministros fiscales y tropas enteras sin cruzar el peligroso Canal de la Mancha costero acechado por Inglaterra, se diseñó la asombrosa ruta logística conocida históricamente como el <strong>"Camino Español"</strong>. Este corredor militar unía de modo seguro Génova con Flandes cruzando los Alpes y el Franco Condado.
+        </p>
+      </article>
+
+      <!-- TAB_4: FILIPINAS -->
+      <article id="tab-filipinas-asia" class="map-tab-content bg-slate-905 bg-slate-900/40 p-6 rounded border border-slate-800 leading-relaxed space-y-4">
+        <h3 class="text-xl font-cinzel text-white font-bold border-b border-dorado/10 pb-2">⚓ El Archipiélago de las Filipinas y las Marianas</h3>
+        <p class="text-sm text-slate-350 font-serif text-justify">
+          Fundadas y colonizadas oficialmente en 1565 por la mítica expedición conquistadora de Miguel López de Legazpi y Andrés de Urdaneta. Las islas Filipinas, situadas estratégicamente en el flanco este del continente asiático, sirvieron de modo definitivo como el gran baluarte y base geopolítica y militar hispana frente al Lejano Oriente.
+        </p>
+        <p class="text-sm text-slate-350 font-serif text-justify">
+          La ciudad amurallada de Manila centralizaba un asombroso comercio y red de influencias con los puertos costeros e imperios de la dinastía china Ming, Japón y las islas Molucas de Indonesia. El virreinato administraba de modo soberano las islas Carolinas, las Marianas y las Palaos en Micronesia, trazando las rutas seguras de retorno intercontinental.
+        </p>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="border-t border-dorado/30 bg-slate-950 pt-12 pb-8 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500 font-mono text-[10px]">
+        <div>
+          &copy; 2026 Archivo Digital de la Monarquía Hispánica. Cartografía del Padrón Real compilada y custodiada rigurosamente.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/buscador.js" defer></script>
+  <script>
+    // Código Javascript local interactivo para alternar las secciones descriptivas sin usar frameworks
+    function switchTab(tabId) {
+      // Ocultar todos los artículos cartográficos
+      var contents = document.getElementsByClassName('map-tab-content');
+      for (var i = 0; i < contents.length; i++) {
+        contents[i].classList.remove('active');
+      }
+      
+      // Desactivar todos los botones de pestañas
+      var buttons = document.getElementsByClassName('map-tab-button');
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove('active');
+        buttons[i].classList.add('text-slate-300');
+      }
+
+      // Mostrar el contenido seleccionado
+      document.getElementById(tabId).classList.add('active');
+      
+      // Activar el botón correspondiente
+      var activeBtnId = 'btn-' + tabId;
+      var activeBtn = document.getElementById(activeBtnId);
+      if (activeBtn) {
+        activeBtn.classList.add('active');
+        activeBtn.classList.remove('text-slate-300');
+      }
+    }
+  </script>
+</body>
+</html>
