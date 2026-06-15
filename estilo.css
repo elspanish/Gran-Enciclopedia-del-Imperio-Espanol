@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Fira+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-rojo-imperial: #8b1e2d;
+  --color-dorado: #c9a227;
+  --color-azul-oscuro: #102a43;
+  --color-pergamino: #f5f0e1;
+  --color-pergamino-oscuro: #e7dec2;
+  --color-blanco: #ffffff;
+  
+  --font-cinzel: "Cinzel", serif;
+  --font-merriweather: "Merriweather", serif;
+  --font-mono: "Fira Mono", monospace;
+}
+
+/* Estilos de pergamino y museísticos personalizados */
+.bg-pergamino-texture {
+  background-color: #f5f0e1;
+  background-image: radial-gradient(#e7dec2 1px, transparent 1px), radial-gradient(#e7dec2 1px, #f5f0e1 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  background-color: #0b1724; /* Azul sumamente oscuro e imperial */
+  color: #1e293b;
+}
+
+.title-serif {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.05em;
+}
+
+/* Bordes elegantes de estilo libro antiguo o museo */
+.border-double-gold {
+  border-style: double;
+  border-width: 4px;
+  border-color: #c9a227;
+}
+
+/* Efectos visuales de cartas y museos */
+.card-museum {
+  background-color: #ffffff;
+  border: 1px solid rgba(201, 162, 39, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-museum:hover {
+  transform: translateY(-4px);
+  border-color: #c9a227;
+  box-shadow: 0 12px 30px rgba(139, 30, 45, 0.1);
+}
+
+/* Cruz de Borgoña animada o fija */
+.burgundy-overlay {
+  background-image: url('/img/cruz-borgona.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Utilidades adicionales */
+.gradient-gold {
+  background: linear-gradient(135deg, #c9a227 0%, #ecd37a 50%, #af8812 100%);
+}
+
+.gradient-dark {
+  background: linear-gradient(135deg, #0b1724 0%, #102a43 100%);
+}
+
+.bg-rojo-imperial {
+  background-color: #8b1e2d;
+}
+
+.text-rojo-imperial {
+  color: #8b1e2d;
+}
+
+.text-dorado {
+  color: #c9a227;
+}
+
+.bg-dorado {
+  background-color: #c9a227;
+}
+
+.border-dorado {
+  border-color: #c9a227;
+}
+
+/* Scrollbar estilo museo */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1724;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9a227;
+  border-radius: 0px;
+  border: 2px solid #0b1724;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8b1e2d;
+}
