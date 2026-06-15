@@ -1,6 +1,0 @@
-{
-  "name": "Enciclopedia del Imperio Español",
-  "description": "Una enciclopedia digital académica y visual sobre el Imperio Español, detallando sus monarcas, exploradores, virreinatos, batallas, tercios y comercio.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
